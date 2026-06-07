@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Praveen Raju K – AI & ML Engineer. Full Stack Developer, Dr. Kalam Young Achiever Award winner. Explore projects, skills, and experience.">
+    <title>Praveen Raju K | AI & ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="header" id="header">
+    <nav class="navbar">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>PRK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+            <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+            <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+            <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+            <li><a href="#achievements" class="nav-link" id="nav-achievements">Awards</a></li>
+            <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
+            <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero-section">
+    <div class="hero-bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for Opportunities
+        </div>
+
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Praveen Raju K<span class="wave-emoji">👋</span></h1>
+
+        <div class="hero-roles">
+            <span class="role-prefix">I'm a&nbsp;</span>
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+        </div>
+
+        <p class="hero-desc">
+            I design and build <strong>intelligent, data-driven systems</strong> using Machine Learning
+            and scalable engineering practices to solve real-world problems.
+        </p>
+
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="btn-hero-projects">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                View My Work
+            </a>
+            <a href="Praveen Raju Resume Final.pdf" download class="btn btn-outline" id="btn-hero-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CV
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Awards</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Certifications</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-col reveal-left">
+                <div class="about-image-wrapper">
+                    <img src="myimage.jpg" alt="Praveen Raju K" class="about-photo">
+                    <div class="image-decoration"></div>
+                    <div class="image-badge">
+                        <span>🏆</span>
+                        <div>
+                            <p>Dr. Kalam</p>
+                            <p>Young Achiever</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content-col reveal-right">
+                <div class="section-label">ABOUT ME</div>
+                <h2 class="section-title">Crafting the Future with <span class="text-accent">AI & Data</span></h2>
+
+                <p class="about-para">
+                    I'm a passionate <strong>AI & Machine Learning engineer</strong> pursuing my degree at
+                    <strong>Sri Eshwar College of Engineering</strong>. I specialize in building intelligent
+                    systems that combine data, algorithms, and scalable architectures.
+                </p>
+                <p class="about-para">
+                    My work focuses on applying ML techniques and data engineering to solve real-world
+                    problems — turning complex datasets into meaningful insights and building systems
+                    that are reliable, efficient, and impactful.
+                </p>
+                <p class="about-para">
+                    I continuously explore modern AI tools, backend systems, and data-driven architectures
+                    to evolve as a professional engineer.
+                </p>
+
+                <div class="about-info-grid">
+                    <div class="info-item">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Salem, Tamil Nadu</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>Available Now</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.36 19.36 0 0 1 1.64 3.4 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 6 6l.27-.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+                        <span>Open to Collaboration</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>praveenraju@email.com</span>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">TECHNICAL SKILLS</div>
+            <h2 class="section-title">My <span class="text-accent">Skillset</span></h2>
+            <p class="section-desc">A curated set of tools, languages, and frameworks I use to build intelligent, scalable applications.</p>
+        </div>
+
+        <div class="skills-categories">
+            <!-- AI & ML -->
+            <div class="skill-category reveal">
+                <div class="category-header">
+                    <div class="category-icon">🧠</div>
+                    <h3>AI & Machine Learning</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="pill">Python</span>
+                    <span class="pill">Machine Learning</span>
+                    <span class="pill">Deep Learning</span>
+                    <span class="pill">Computer Vision</span>
+                    <span class="pill">OpenCV</span>
+                    <span class="pill">YOLOv5</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-category reveal">
+                <div class="category-header">
+                    <div class="category-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="pill">Django</span>
+                    <span class="pill">REST API</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">Express.js</span>
+                    <span class="pill">Flask</span>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-category reveal">
+                <div class="category-header">
+                    <div class="category-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="pill">HTML5</span>
+                    <span class="pill">CSS3</span>
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">React</span>
+                    <span class="pill">Flutter</span>
+                </div>
+            </div>
+
+            <!-- Data & DB -->
+            <div class="skill-category reveal">
+                <div class="category-header">
+                    <div class="category-icon">🗄️</div>
+                    <h3>Data & Databases</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="pill">SQL</span>
+                    <span class="pill">MySQL</span>
+                    <span class="pill">MongoDB</span>
+                    <span class="pill">Firebase</span>
+                    <span class="pill">Data Analytics</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category reveal">
+                <div class="category-header">
+                    <div class="category-icon">🛠️</div>
+                    <h3>Tools & Platforms</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="pill">Git & GitHub</span>
+                    <span class="pill">VS Code</span>
+                    <span class="pill">Java</span>
+                    <span class="pill">MS Excel</span>
+                    <span class="pill">Postman</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icon Grid -->
+        <div class="tech-icon-grid">
+            <div class="tech-icon-card reveal" title="Python">
+                <img src="images/Techstack img/python-svgrepo-com.svg" alt="Python" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">🐍</div>
+                <span>Python</span>
+            </div>
+            <div class="tech-icon-card reveal" title="Django">
+                <img src="images/Techstack img/django-svgrepo-com.svg" alt="Django" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">🎸</div>
+                <span>Django</span>
+            </div>
+            <div class="tech-icon-card reveal" title="REST API">
+                <img src="images/Techstack img/api-svgrepo-com.svg" alt="REST API" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">🔗</div>
+                <span>REST API</span>
+            </div>
+            <div class="tech-icon-card reveal" title="HTML">
+                <img src="images/Techstack img/html-5-svgrepo-com.svg" alt="HTML" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">📄</div>
+                <span>HTML5</span>
+            </div>
+            <div class="tech-icon-card reveal" title="CSS">
+                <img src="images/Techstack img/css-3-svgrepo-com.svg" alt="CSS" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">🎨</div>
+                <span>CSS3</span>
+            </div>
+            <div class="tech-icon-card reveal" title="JavaScript">
+                <img src="images/Techstack img/javascript-svgrepo-com.svg" alt="JavaScript" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">⚡</div>
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-icon-card reveal" title="Java">
+                <img src="images/Techstack img/java-svgrepo-com.svg" alt="Java" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">☕</div>
+                <span>Java</span>
+            </div>
+            <div class="tech-icon-card reveal" title="SQL">
+                <img src="images/Techstack img/sql-database-sql-azure-svgrepo-com.svg" alt="SQL" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="icon-fallback" style="display:none">🗄️</div>
+                <span>SQL</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">SELECTED WORK</div>
+            <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+            <p class="section-desc">Real-world applications built with modern tech stacks and machine learning</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 – IntelliFarm -->
+            <div class="project-card reveal" id="project-intellifarm">
+                <div class="project-card-inner">
+                    <div class="project-number">01</div>
+                    <div class="project-top">
+                        <div class="project-icon">🌾</div>
+                        <div class="project-links-top">
+                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+                            </a>
+                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">IntelliFarm – Smart Agriculture Platform</h3>
+                    <p class="project-desc">AI-powered system providing crop advisory, disease detection, and smart irrigation management for farmers. Real-time monitoring with ML-based predictions.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Firebase</span>
+                        <span>Flutter</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 – Pothole Detection -->
+            <div class="project-card reveal featured" id="project-pothole">
+                <div class="project-card-inner">
+                    <div class="project-number">02</div>
+                    <div class="project-featured-badge">Featured</div>
+                    <div class="project-top">
+                        <div class="project-icon">🛣️</div>
+                        <div class="project-links-top">
+                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+                            </a>
+                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Pothole Detection – Computer Vision</h3>
+                    <p class="project-desc">Deep learning model using YOLOv5 to detect potholes from road images in real-time, improving road safety through automated infrastructure monitoring.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>YOLOv5</span>
+                        <span>OpenCV</span>
+                        <span>Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 – Time Bank -->
+            <div class="project-card reveal" id="project-timebank">
+                <div class="project-card-inner">
+                    <div class="project-number">03</div>
+                    <div class="project-top">
+                        <div class="project-icon">⏰</div>
+                        <div class="project-links-top">
+                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+                            </a>
+                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Time Bank Community Platform</h3>
+                    <p class="project-desc">Web platform enabling community members to exchange services using time credits instead of money — fostering community-driven collaboration and fair skill exchange.</p>
+                    <div class="project-tags">
+                        <span>Django</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                        <span>REST API</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">WORK EXPERIENCE</div>
+            <h2 class="section-title">Professional <span class="text-accent">Journey</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date">Dec 2025</span>
+                            <h3 class="timeline-role">Data Analytics & AI Intern</h3>
+                            <span class="timeline-company">National Institute of Electronics and Information Technology (NIELIT), Calicut</span>
+                        </div>
+                        <div class="timeline-badge">Internship</div>
+                    </div>
+                    <p class="timeline-desc">
+                        Completed a 4-week offline internship focused on Artificial Intelligence, Data Analytics, and Django-based web development.
+                        Worked on building AI-driven applications involving dataset preprocessing, machine learning workflows, and backend integration.
+                    </p>
+                    <ul class="timeline-points">
+                        <li>Developed AI models using Python and machine learning techniques</li>
+                        <li>Integrated AI solutions into Django web applications</li>
+                        <li>Worked on data preprocessing, visualization, and analytics pipelines</li>
+                        <li>Built computer vision projects using OpenCV and deep learning concepts</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span>Python</span><span>Django</span><span>OpenCV</span><span>Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements" class="section achievements-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">RECOGNITION</div>
+            <h2 class="section-title">Awards & <span class="text-accent">Milestones</span></h2>
+            <p class="section-desc">Achievements that reflect dedication, innovation, and impact</p>
+        </div>
+
+        <div class="achievements-grid">
+
+            <div class="achievement-card reveal" id="achv-kalam">
+                <div class="achievement-glow"></div>
+                <div class="achievement-icon-wrap">🏆</div>
+                <div class="achievement-body">
+                    <span class="achievement-year">2025</span>
+                    <h3>Dr. Kalam Young Achiever Award</h3>
+                    <p>Recognized for outstanding innovation and contribution in AI & Machine Learning projects at a national level.</p>
+                </div>
+            </div>
+
+            <div class="achievement-card reveal gold" id="achv-first">
+                <div class="achievement-glow"></div>
+                <div class="achievement-icon-wrap">🥇</div>
+                <div class="achievement-body">
+                    <span class="achievement-year">2025</span>
+                    <h3>First Place – Project Presentation</h3>
+                    <p>Won first place for presenting an impactful project solution with strong technical implementation and innovation.</p>
+                </div>
+            </div>
+
+            <div class="achievement-card reveal silver" id="achv-second">
+                <div class="achievement-glow"></div>
+                <div class="achievement-icon-wrap">🥈</div>
+                <div class="achievement-body">
+                    <span class="achievement-year">2025</span>
+                    <h3>Second Place – Freshathon 2K'25</h3>
+                    <p>Awarded second place for innovative problem-solving and project execution during Freshathon 2K'25 competition.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications" class="section certs-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">LEARNING PATH</div>
+            <h2 class="section-title">Licenses & <span class="text-accent">Certifications</span></h2>
+            <p class="section-desc">Continuous learning and skill validation across platforms</p>
+        </div>
+
+        <div class="certs-grid">
+
+            <a href="https://drive.google.com/file/d/1tSRByI9RE5vUpKu7dcBZfeZNgk_ruMns/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-django">
+                <div class="cert-icon">🎸</div>
+                <div class="cert-content">
+                    <span class="cert-platform-tag">Udemy</span>
+                    <h3>Django Development</h3>
+                    <p>Complete Django framework for building scalable web applications</p>
+                </div>
+                <div class="cert-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1ODFtBgr_FBFYCi4sQ2E3RCQzX6arAbBc/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-python">
+                <div class="cert-icon">🐍</div>
+                <div class="cert-content">
+                    <span class="cert-platform-tag">GUVI</span>
+                    <h3>Python Programming</h3>
+                    <p>Core Python programming concepts, data structures, and algorithms</p>
+                </div>
+                <div class="cert-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1PtvNPKu84VlllNeimu9wUHFwgVQFDRnM/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-excel">
+                <div class="cert-icon">📊</div>
+                <div class="cert-content">
+                    <span class="cert-platform-tag">Udemy</span>
+                    <h3>MS Excel – Data Analysis</h3>
+                    <p>Advanced Excel for data analysis, pivots, and business reporting</p>
+                </div>
+                <div class="cert-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1RGPCW02BIdy6sENyXnRGUn8vAQJOv7P5/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-html">
+                <div class="cert-icon">🌐</div>
+                <div class="cert-content">
+                    <span class="cert-platform-tag">Udemy</span>
+                    <h3>HTML & CSS Mastery</h3>
+                    <p>Modern front-end design with HTML5, CSS3, and responsive layouts</p>
+                </div>
+                <div class="cert-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1Y-XITxkiv7qVynPAcFafrsDjvnWC5D9k/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-nielit">
+                <div class="cert-icon">🔬</div>
+                <div class="cert-content">
+                    <span class="cert-platform-tag">NIELIT</span>
+                    <h3>AI & Data Analytics Internship</h3>
+                    <p>Official internship certificate from NIELIT Calicut – AI and Data Analytics</p>
+                </div>
+                <div class="cert-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">CONTACT</div>
+            <h2 class="section-title">Let's <span class="text-accent">Connect</span></h2>
+            <p class="section-desc">Open to collaborations, internships, and building cool things together</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Form -->
+            <div class="contact-form-wrap reveal-left">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" placeholder="Let's collaborate on...">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Details -->
+            <div class="contact-info-wrap reveal-right">
+                <div class="contact-card">
+                    <h3>Get In Touch</h3>
+                    <p class="contact-card-desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.</p>
+
+                    <div class="contact-info-items">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <span class="info-value">praveenraju@email.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Salem, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Response Time</span>
+                                <span class="info-value">Within 24 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Find Me On</h4>
+                        <div class="social-row">
+                            <a href="https://github.com/Praveenraju10" target="_blank" class="social-btn" id="social-github" aria-label="GitHub">
+                                <img src="images/github.svg" alt="GitHub">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/praveen-raju-k/" target="_blank" class="social-btn" id="social-linkedin" aria-label="LinkedIn">
+                                <img src="images/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://instagram.com/" target="_blank" class="social-btn" id="social-instagram" aria-label="Instagram">
+                                <img src="images/instagram.svg" alt="Instagram">
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="#home" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>PRK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">© 2025 Praveen Raju K. Crafted with passion & code.</p>
+        <div class="footer-socials">
+            <a href="https://github.com/Praveenraju10" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/praveen-raju-k/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
