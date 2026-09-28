@@ -10,7 +10,7 @@ export default function Footer() {
         <a href="#home" className="footer-logo" onClick={handleLogoClick}>
           <span className="logo-bracket">&lt;</span>Raju<span className="logo-bracket">/&gt;</span>
         </a>
-        <p className="footer-copy">© 2025 Praveen Raju K. Crafted with passion & code.</p>
+        <p className="footer-copy">© 2026 Praveen Raju K. Crafted with passion & code.</p>
         <div className="footer-socials">
           <a href="https://github.com/Praveenraju10" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src="/images/github.svg" alt="GitHub" />

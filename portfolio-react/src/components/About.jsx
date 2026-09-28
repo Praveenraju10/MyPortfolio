@@ -8,9 +8,9 @@ export default function About() {
     ],
     tagline: 'Curiosity drives me. Innovation inspires me. Building is how I grow.',
     imageUrl: '/myimage.jpg',
-    githubUrl: 'https://github.com/Praveenraju1707',
+    githubUrl: 'https://github.com/Praveenraju10',
     twitterUrl: 'https://twitter.com',
-    linkedinUrl: 'https://www.linkedin.com/in/praveen-raju-k-88b1b2292',
+    linkedinUrl: 'https://www.linkedin.com/in/praveen-raju-k/',
   };
 
   const socialIcons = [

@@ -358,11 +358,11 @@ export default function HandshakeIntro() {
       <div className="fullscreen-brand-overlay">
         <div className="intro-badge-top">
           <span className="gold-sparkle">✦</span>
-          <span>EXECUTIVE PARTNERSHIP &bull; AI & SOFTWARE LEADERSHIP</span>
+          <span>EXECUTIVE PARTNERSHIP • AI & SOFTWARE LEADERSHIP</span>
           <span className="gold-sparkle">✦</span>
         </div>
         <h1 className="intro-title">Praveen Raju K</h1>
-        <p className="intro-subtitle">AI & ML Engineer &bull; Full Stack Developer</p>
+        <p className="intro-subtitle">AI & ML Engineer • Full Stack Developer</p>
       </div>
 
       {/* ─── BOTTOM CONTROLS & STATUS ─── */}
@@ -373,8 +373,8 @@ export default function HandshakeIntro() {
           <span className="status-text">
             {phase === 'approaching' && 'CONNECTING PARTNERSHIP...'}
             {phase === 'clasped' && 'EXECUTIVE HANDSHAKE INITIATED'}
-            {phase === 'shaking' && 'SEALING THE DEAL &bull; MUTUAL TRUST'}
-            {phase === 'sealed' && '✦ PARTNERSHIP CONFIRMED &bull; WELCOME ✦'}
+            {phase === 'shaking' && 'SEALING THE DEAL • MUTUAL TRUST'}
+            {phase === 'sealed' && '✦ PARTNERSHIP CONFIRMED • WELCOME ✦'}
           </span>
         </div>
 
@@ -382,14 +382,14 @@ export default function HandshakeIntro() {
         <div className="fullscreen-partnership-badges">
           <div className="intro-badge badge-client">
             <span className="badge-gold-dot" />
-            <span>Visionary Client &bull; Enterprise</span>
+            <span>Visionary Client • Enterprise</span>
           </div>
           <div className="intro-badge badge-center-vs">
-            <span>AGREEMENT &bull; TRUST &bull; EXCELLENCE</span>
+            <span>AGREEMENT • TRUST • EXCELLENCE</span>
           </div>
           <div className="intro-badge badge-developer">
             <span className="badge-gold-dot" />
-            <span>Praveen Raju &bull; AI Solutions</span>
+            <span>Praveen Raju • AI Solutions</span>
           </div>
         </div>
 
@@ -406,7 +406,7 @@ export default function HandshakeIntro() {
           <span className="intro-btn-shimmer" />
           <span className="intro-btn-icon">🤝</span>
           <span className="intro-btn-text">
-            {phase === 'sealed' ? 'Welcome &bull; Enter Portfolio' : 'Shake Hands & Enter Portfolio'}
+            {phase === 'sealed' ? 'Welcome • Enter Portfolio' : 'Shake Hands & Enter Portfolio'}
           </span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M5 12h14M12 5l7 7-7 7" />

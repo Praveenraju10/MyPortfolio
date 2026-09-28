@@ -248,7 +248,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="info-label">Location</span>
-                    <span className="info-value">Salem, Tamil Nadu, India</span>
+                    <span className="info-value">Tamil Nadu, India</span>
                   </div>
                 </div>
                 <div className="contact-info-item">

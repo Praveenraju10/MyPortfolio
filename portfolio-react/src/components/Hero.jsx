@@ -181,20 +181,22 @@ export default function Hero() {
 
           <div className="hero-social-pill-row">
             <a
-              href="https://github.com/Praveenraju1707"
+              href="https://github.com/Praveenraju10"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-social-link"
               title="GitHub Profile"
+              aria-label="GitHub Profile"
             >
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/praveen-raju-k-88b1b2292"
+              href="https://www.linkedin.com/in/praveen-raju-k/"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-social-link"
               title="LinkedIn Profile"
+              aria-label="LinkedIn Profile"
             >
               <FaLinkedin />
             </a>
