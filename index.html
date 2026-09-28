@@ -1,16 +1,112 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Praveen Raju K – AI & ML Engineer. Full Stack Developer, Dr. Kalam Young Achiever Award winner. Explore projects, skills, and experience.">
+    <meta name="description" content="Praveen Raju K â€“ AI & ML Engineer. Full Stack Developer, Dr. Kalam Young Achiever Award winner. Explore projects, skills, and experience.">
     <title>Praveen Raju K | AI & ML Engineer</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/icons/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/images/icons/favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<!-- ===== LUXURY FULL-SCREEN PHOTOREALISTIC HANDSHAKE INTRO OVERLAY (5-SECOND CINEMATIC) ===== -->
+<div class="handshake-intro-overlay fullscreen-experience" id="handshakeIntroOverlay" title="Click anywhere to enter portfolio">
+    <!-- Full-Screen Cinematic Photorealistic Handshake Stage -->
+    <div class="fullscreen-handshake-stage phase-approaching" id="fullscreenHandshakeStage">
+        <!-- Layer 1: Left Suited Arm (Sliding in from Left Edge) -->
+        <div class="hand-split-side side-left">
+            <img src="assets/images/hero/gold_handshake.jpg" alt="Executive Left Hand" class="fullscreen-handshake-photo photo-left" />
+        </div>
+
+        <!-- Layer 2: Right Suited Arm (Sliding in from Right Edge) -->
+        <div class="hand-split-side side-right">
+            <img src="assets/images/hero/gold_handshake.jpg" alt="Executive Right Hand" class="fullscreen-handshake-photo photo-right" />
+        </div>
+
+        <!-- Layer 3: Unified Full-Screen Handshake on Clasp & Shake -->
+        <div class="hand-unified-layer">
+            <img src="assets/images/hero/gold_handshake.jpg" alt="Executive Fullscreen Handshake" class="fullscreen-handshake-photo photo-unified" />
+            <div class="photo-cinematic-vignette"></div>
+            <div class="photo-gold-light-sweep"></div>
+        </div>
+
+        <!-- Central Gold Aura & Clasp Flash -->
+        <div class="fullscreen-gold-aura"></div>
+        <div class="fullscreen-clasp-flash" id="fullscreenClaspFlash"></div>
+    </div>
+
+    <!-- Background Particle Dust Canvas -->
+    <canvas id="introCanvas" class="intro-canvas"></canvas>
+
+    <!-- Top HUD: Countdown & Skip Button -->
+    <div class="intro-hud-top">
+        <div class="intro-countdown-chip">
+            <div class="intro-timer-ring">
+                <svg viewBox="0 0 36 36">
+                    <path class="timer-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path id="introTimerProgress" class="timer-progress" stroke-dasharray="100, 100" stroke-dashoffset="0" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <span class="timer-number" id="introTimerNumber">5s</span>
+            </div>
+            <span class="timer-label">Entering Portfolio</span>
+        </div>
+
+        <button class="intro-skip-btn" id="introSkipBtn" aria-label="Skip Intro">
+            <span>Skip Intro</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+    </div>
+
+    <!-- Center / Brand Overlay -->
+    <div class="fullscreen-brand-overlay">
+        <div class="intro-badge-top">
+            <span class="gold-sparkle">âœ¦</span>
+            <span>EXECUTIVE PARTNERSHIP &bull; AI & SOFTWARE LEADERSHIP</span>
+            <span class="gold-sparkle">âœ¦</span>
+        </div>
+        <h1 class="intro-title">Praveen Raju K</h1>
+        <p class="intro-subtitle">AI & ML Engineer &bull; Full Stack Developer</p>
+    </div>
+
+    <!-- Bottom Controls & Status -->
+    <div class="fullscreen-bottom-hud">
+        <!-- Status Pill -->
+        <div class="fullscreen-status-pill">
+            <div class="status-pulse-dot"></div>
+            <span class="status-text" id="introStatusText">CONNECTING PARTNERSHIP...</span>
+        </div>
+
+        <!-- Partnership Badges -->
+        <div class="fullscreen-partnership-badges">
+            <div class="intro-badge badge-client">
+                <span class="badge-gold-dot"></span>
+                <span>Visionary Client &bull; Enterprise</span>
+            </div>
+            <div class="intro-badge badge-center-vs">
+                <span>AGREEMENT &bull; TRUST &bull; EXCELLENCE</span>
+            </div>
+            <div class="intro-badge badge-developer">
+                <span class="badge-gold-dot"></span>
+                <span>Praveen Raju &bull; AI Solutions</span>
+            </div>
+        </div>
+
+        <!-- CTA Enter Button -->
+        <button class="intro-enter-btn" id="introEnterBtn" aria-label="Enter Portfolio">
+            <span class="intro-btn-shimmer"></span>
+            <span class="intro-btn-icon">ðŸ¤</span>
+            <span class="intro-btn-text" id="introBtnText">Shake Hands & Enter Portfolio</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <p class="intro-hint">Click anywhere or button above to explore instantly</p>
+    </div>
+</div>
 
 <!-- ===== CURSOR GLOW ===== -->
 <div class="cursor-glow" id="cursorGlow"></div>
@@ -18,27 +114,61 @@
 <!-- ===== NAVBAR ===== -->
 <header class="header" id="header">
     <nav class="navbar">
-        <a href="#home" class="nav-logo">
-            <span class="logo-bracket">&lt;</span>PRK<span class="logo-bracket">/&gt;</span>
+        <a href="#home" class="nav-logo" aria-label="Praveen Raju Portfolio Home">
+            <div class="logo-symbol">
+                <span class="logo-bracket">&lt;</span><span class="logo-name">Raju</span><span class="logo-bracket">/&gt;</span>
+            </div>
+            <span class="nav-status-badge" title="Available for opportunities">
+                <span class="status-pulse-dot"></span>
+                <span class="status-text">Available</span>
+            </span>
         </a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
-            <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
-            <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
-            <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
-            <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
-            <li><a href="#achievements" class="nav-link" id="nav-achievements">Awards</a></li>
-            <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
-            <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
+        <div class="nav-capsule">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+                <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+                <li><a href="#achievements" class="nav-link" id="nav-achievements">Awards</a></li>
+                <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right-actions">
+            <a href="#contact" class="nav-cta-btn" id="navCtaBtn" aria-label="Contact Praveen">
+                <span>Let's Talk</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 </header>
 
-<!-- ===== HERO ===== -->
 <section id="home" class="hero-section">
+    <!-- ===== HERO HANDSHAKE BACKGROUND ANIMATION ===== -->
+    <div class="hero-handshake-wrapper" id="heroHandshakeWrapper">
+        <div class="hero-handshake-img-layer" id="heroHandshakeImg" style="background-image: url('assets/images/hero/gold_handshake.jpg');"></div>
+        <div class="hero-handshake-overlay"></div>
+        <div class="hero-handshake-shimmer"></div>
+        <canvas id="handshakeCanvas" class="hero-handshake-canvas"></canvas>
+        <div class="handshake-node-labels">
+            <div class="handshake-tag tag-left">
+                <span class="tag-ping"></span>
+                <span>Client &bull; Partnership</span>
+            </div>
+            <div class="handshake-tag tag-right">
+                <span class="tag-ping"></span>
+                <span>Solutions &bull; Delivery</span>
+            </div>
+        </div>
+    </div>
+
     <div class="hero-bg-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
@@ -49,21 +179,21 @@
     <div class="hero-content">
         <div class="hero-badge">
             <span class="badge-dot"></span>
-            Available for Opportunities
+            Available for Full-Time &amp; High-Impact Opportunities
         </div>
 
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Praveen Raju K<span class="wave-emoji">👋</span></h1>
+        <p class="hero-greeting"><span class="gold-accent-dash">&mdash;</span> AI &amp; FULL STACK SOFTWARE ENGINEER <span class="gold-accent-dash">&mdash;</span></p>
+        <h1 class="hero-name">Praveen Raju K</h1>
 
         <div class="hero-roles">
-            <span class="role-prefix">I'm a&nbsp;</span>
+            <span class="role-prefix">Specialized in&nbsp;</span>
             <span class="typing-text" id="typingText"></span>
             <span class="typing-cursor">|</span>
         </div>
 
         <p class="hero-desc">
-            I design and build <strong>intelligent, data-driven systems</strong> using Machine Learning
-            and scalable engineering practices to solve real-world problems.
+            Designing and deploying <strong>intelligent machine learning pipelines</strong>, computer vision systems,
+            and robust <strong>full-stack architectures</strong> engineered for scalability, speed, and real-world impact.
         </p>
 
         <div class="hero-cta">
@@ -71,7 +201,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 View My Work
             </a>
-            <a href="Praveen Raju Resume Final.pdf" download class="btn btn-outline" id="btn-hero-resume">
+            <a href="https://drive.google.com/drive/folders/1c2jxx1ns_pO7IHiKqVTFc0dJvKn63Lll" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-hero-resume">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download CV
             </a>
@@ -79,18 +209,21 @@
 
         <div class="hero-stats">
             <div class="stat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                 <span class="stat-number">3+</span>
-                <span class="stat-label">Projects</span>
+                <span class="stat-label">Full Stack &amp; AI Projects</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                 <span class="stat-number">2+</span>
-                <span class="stat-label">Awards</span>
+                <span class="stat-label">Honors &amp; National Awards</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                 <span class="stat-number">5+</span>
-                <span class="stat-label">Certifications</span>
+                <span class="stat-label">Verified Certifications</span>
             </div>
         </div>
     </div>
@@ -99,202 +232,526 @@
         <div class="scroll-mouse">
             <div class="scroll-wheel"></div>
         </div>
-        <span>Scroll Down</span>
+        <span>EXPLORE PORTFOLIO</span>
     </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT ME SHOWCASE ===== -->
 <section id="about" class="section about-section">
     <div class="container">
-        <div class="about-grid">
-            <div class="about-image-col reveal-left">
-                <div class="about-image-wrapper">
-                    <img src="myimage.jpg" alt="Praveen Raju K" class="about-photo">
-                    <div class="image-decoration"></div>
-                    <div class="image-badge">
-                        <span>🏆</span>
-                        <div>
-                            <p>Dr. Kalam</p>
-                            <p>Young Achiever</p>
+        <!-- Section Header with single line title -->
+        <div class="section-header about-header-single-line">
+            <div class="section-label">ABOUT ME</div>
+            <h2 class="section-title single-line-title">Turning Ideas into <span class="text-accent">Intelligent Solutions</span></h2>
+            <p class="section-desc">Passionate about building scalable AI systems and high-impact web architectures</p>
+        </div>
+
+        <!-- Showcase Container -->
+        <div class="testimonial-carousel-wrap about-single-showcase">
+            <div class="testimonial-carousel-desktop">
+                <!-- Full Portrait Image Box -->
+                <div class="testimonial-avatar-box full-portrait-avatar">
+                    <img src="assets/images/profile/myimage.jpg" alt="Praveen Raju K" class="testimonial-avatar-img full-photo-img" />
+                    <div class="avatar-gold-border-glow"></div>
+                </div>
+
+                <!-- Overlapping Floating Modern Dark Card -->
+                <div class="testimonial-card-overlap">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-header">
+                            <span class="testimonial-quote-badge">â€œ</span>
+                            <h3 class="testimonial-name">Praveen Raju K</h3>
+                            <p class="testimonial-title">AI & Machine Learning Engineer â€¢ Full Stack Developer</p>
+                        </div>
+
+                        <div class="testimonial-desc">
+                            <p>I build intelligent, scalable, and user-centric applications by combining Artificial Intelligence, Machine Learning, data engineering, and modern software development. My interests span Generative AI, Deep Learning, LLMs, Data Analytics, and Full Stack Development.</p>
+                            <p>I enjoy transforming ideas into impactful solutions â€” from designing AI-powered applications and building intelligent systems to developing robust, end-to-end web applications. Driven by curiosity and a passion for continuous learning, I strive to create technology that solves real-world problems and makes a meaningful difference.</p>
+                            <p style="font-weight: 700; color: var(--text-gold, #F5D77F); margin-top: 12px;">Curiosity drives me. Innovation inspires me. Building is how I grow.</p>
+                        </div>
+
+                        <!-- Social Icons Row (YouTube Removed) -->
+                        <div class="testimonial-socials-row">
+                            <a href="https://github.com/Praveenraju1707" target="_blank" rel="noopener noreferrer" class="testimonial-social-circle" aria-label="GitHub" title="GitHub">
+                                <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="testimonial-social-circle" aria-label="Twitter" title="Twitter">
+                                <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/praveen-raju-k-88b1b2292" target="_blank" rel="noopener noreferrer" class="testimonial-social-circle" aria-label="LinkedIn" title="LinkedIn">
+                                <svg class="social-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="about-content-col reveal-right">
-                <div class="section-label">ABOUT ME</div>
-                <h2 class="section-title">Crafting the Future with <span class="text-accent">AI & Data</span></h2>
-
-                <p class="about-para">
-                    I'm a passionate <strong>AI & Machine Learning engineer</strong> pursuing my degree at
-                    <strong>Sri Eshwar College of Engineering</strong>. I specialize in building intelligent
-                    systems that combine data, algorithms, and scalable architectures.
-                </p>
-                <p class="about-para">
-                    My work focuses on applying ML techniques and data engineering to solve real-world
-                    problems — turning complex datasets into meaningful insights and building systems
-                    that are reliable, efficient, and impactful.
-                </p>
-                <p class="about-para">
-                    I continuously explore modern AI tools, backend systems, and data-driven architectures
-                    to evolve as a professional engineer.
-                </p>
-
-                <div class="about-info-grid">
-                    <div class="info-item">
-                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Salem, Tamil Nadu</span>
-                    </div>
-                    <div class="info-item">
-                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        <span>Available Now</span>
-                    </div>
-                    <div class="info-item">
-                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.36 19.36 0 0 1 1.64 3.4 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 6 6l.27-.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-                        <span>Open to Collaboration</span>
-                    </div>
-                    <div class="info-item">
-                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>praveenraju@email.com</span>
-                    </div>
-                </div>
-
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== SKILLS ===== -->
+<!-- ===== SKILLS SECTION ===== -->
 <section id="skills" class="section skills-section">
     <div class="container">
         <div class="section-header">
-            <div class="section-label">TECHNICAL SKILLS</div>
-            <h2 class="section-title">My <span class="text-accent">Skillset</span></h2>
-            <p class="section-desc">A curated set of tools, languages, and frameworks I use to build intelligent, scalable applications.</p>
+            <div class="section-label">TECHNICAL MASTERY</div>
+            <h2 class="section-title">Skills &amp; <span class="text-accent">Technologies</span></h2>
+            <p class="section-desc">Architecting intelligent AI models, robust distributed backends, and responsive modern user experiences.</p>
         </div>
 
-        <div class="skills-categories">
-            <!-- AI & ML -->
-            <div class="skill-category reveal">
-                <div class="category-header">
-                    <div class="category-icon">🧠</div>
-                    <h3>AI & Machine Learning</h3>
+        <!-- Interactive Category Filter Bar -->
+        <div class="skills-filter-bar" id="skillsFilterBar">
+            <button class="skill-filter-btn active" data-skill-filter="all">
+                <span class="filter-dot"></span>All Capabilities
+            </button>
+            <button class="skill-filter-btn" data-skill-filter="ai">
+                <span class="filter-dot"></span>AI &amp; Vision
+            </button>
+            <button class="skill-filter-btn" data-skill-filter="backend">
+                <span class="filter-dot"></span>Backend &amp; APIs
+            </button>
+            <button class="skill-filter-btn" data-skill-filter="frontend">
+                <span class="filter-dot"></span>Frontend &amp; UI
+            </button>
+            <button class="skill-filter-btn" data-skill-filter="data">
+                <span class="filter-dot"></span>Data &amp; Cloud
+            </button>
+            <button class="skill-filter-btn" data-skill-filter="tools">
+                <span class="filter-dot"></span>DevOps &amp; Tools
+            </button>
+        </div>
+
+        <!-- Domain Competency Cards Grid -->
+        <div class="skills-domains-grid" id="skillsDomainsGrid">
+
+            <!-- Domain 1: AI & Machine Learning -->
+            <div class="skill-domain-card reveal" data-category="ai">
+                <div class="domain-card-glow"></div>
+                <div class="domain-card-header">
+                    <div class="domain-icon-wrap ai-icon-wrap">
+                        <span class="domain-emoji">ðŸ§ </span>
+                    </div>
+                    <div class="domain-header-meta">
+                        <div class="domain-badge-row">
+                            <span class="domain-level-badge badge-gold">Advanced / R&amp;D</span>
+                            <span class="domain-category-tag">Core Focus</span>
+                        </div>
+                        <h3 class="domain-title">AI &amp; Machine Learning</h3>
+                    </div>
                 </div>
-                <div class="skill-pills">
-                    <span class="pill">Python</span>
-                    <span class="pill">Machine Learning</span>
-                    <span class="pill">Deep Learning</span>
-                    <span class="pill">Computer Vision</span>
-                    <span class="pill">OpenCV</span>
-                    <span class="pill">YOLOv5</span>
+                <p class="domain-summary">Building predictive models, computer vision systems, and multi-stage RAG architectures tailored for real-world automation.</p>
+
+                <!-- Skill Progress Bars -->
+                <div class="domain-skills-bars">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Python &amp; ML (Scikit-Learn, PyTorch)</span>
+                            <span class="skill-percent" data-target="95">95%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Computer Vision &amp; OpenCV</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">YOLOv5 &amp; Real-Time Object Detection</span>
+                            <span class="skill-percent" data-target="88">88%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Deep Learning &amp; Neural Architectures</span>
+                            <span class="skill-percent" data-target="86">86%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 86%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Generative AI, RAG &amp; FAISS Search</span>
+                            <span class="skill-percent" data-target="85">85%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Pill Tags -->
+                <div class="domain-pills-row">
+                    <span class="dpill">Python</span>
+                    <span class="dpill">PyTorch</span>
+                    <span class="dpill">OpenCV</span>
+                    <span class="dpill">YOLOv5</span>
+                    <span class="dpill">RAG</span>
+                    <span class="dpill">FAISS</span>
+                    <span class="dpill">Deep Learning</span>
                 </div>
             </div>
 
-            <!-- Backend -->
-            <div class="skill-category reveal">
-                <div class="category-header">
-                    <div class="category-icon">⚙️</div>
-                    <h3>Backend Development</h3>
+            <!-- Domain 2: Backend Development -->
+            <div class="skill-domain-card reveal" data-category="backend">
+                <div class="domain-card-glow"></div>
+                <div class="domain-card-header">
+                    <div class="domain-icon-wrap backend-icon-wrap">
+                        <span class="domain-emoji">âš™ï¸</span>
+                    </div>
+                    <div class="domain-header-meta">
+                        <div class="domain-badge-row">
+                            <span class="domain-level-badge badge-blue">Production Ready</span>
+                            <span class="domain-category-tag">Architecture</span>
+                        </div>
+                        <h3 class="domain-title">Backend &amp; API Engineering</h3>
+                    </div>
                 </div>
-                <div class="skill-pills">
-                    <span class="pill">Django</span>
-                    <span class="pill">REST API</span>
-                    <span class="pill">Node.js</span>
-                    <span class="pill">Express.js</span>
-                    <span class="pill">Flask</span>
+                <p class="domain-summary">Designing high-throughput REST APIs, resilient microservices, and AI-model serving backends with secure authentication.</p>
+
+                <!-- Skill Progress Bars -->
+                <div class="domain-skills-bars">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Django &amp; Django REST Framework</span>
+                            <span class="skill-percent" data-target="92">92%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">RESTful API Design &amp; JWT Authentication</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Flask &amp; Microservice Integration</span>
+                            <span class="skill-percent" data-target="88">88%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Node.js &amp; Express.js</span>
+                            <span class="skill-percent" data-target="80">80%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Pill Tags -->
+                <div class="domain-pills-row">
+                    <span class="dpill">Django</span>
+                    <span class="dpill">DRF</span>
+                    <span class="dpill">Flask</span>
+                    <span class="dpill">Node.js</span>
+                    <span class="dpill">Express</span>
+                    <span class="dpill">REST APIs</span>
+                    <span class="dpill">JWT</span>
                 </div>
             </div>
 
-            <!-- Frontend -->
-            <div class="skill-category reveal">
-                <div class="category-header">
-                    <div class="category-icon">🎨</div>
-                    <h3>Frontend Development</h3>
+            <!-- Domain 3: Frontend & Mobile -->
+            <div class="skill-domain-card reveal" data-category="frontend">
+                <div class="domain-card-glow"></div>
+                <div class="domain-card-header">
+                    <div class="domain-icon-wrap frontend-icon-wrap">
+                        <span class="domain-emoji">ðŸŽ¨</span>
+                    </div>
+                    <div class="domain-header-meta">
+                        <div class="domain-badge-row">
+                            <span class="domain-level-badge badge-purple">High Performance</span>
+                            <span class="domain-category-tag">UI / UX</span>
+                        </div>
+                        <h3 class="domain-title">Frontend &amp; Cross-Platform UI</h3>
+                    </div>
                 </div>
-                <div class="skill-pills">
-                    <span class="pill">HTML5</span>
-                    <span class="pill">CSS3</span>
-                    <span class="pill">JavaScript</span>
-                    <span class="pill">React</span>
-                    <span class="pill">Flutter</span>
+                <p class="domain-summary">Creating sleek, responsive interfaces with interactive animations, accessible components, and seamless API connectivity.</p>
+
+                <!-- Skill Progress Bars -->
+                <div class="domain-skills-bars">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">HTML5, Modern CSS3 &amp; Glassmorphism</span>
+                            <span class="skill-percent" data-target="95">95%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">JavaScript (ES6+) &amp; Interactive DOM</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">React.js &amp; Component Architecture</span>
+                            <span class="skill-percent" data-target="85">85%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Flutter &amp; Cross-Platform Mobile</span>
+                            <span class="skill-percent" data-target="80">80%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Pill Tags -->
+                <div class="domain-pills-row">
+                    <span class="dpill">React</span>
+                    <span class="dpill">JavaScript</span>
+                    <span class="dpill">HTML5</span>
+                    <span class="dpill">CSS3</span>
+                    <span class="dpill">Flutter</span>
+                    <span class="dpill">Responsive Design</span>
                 </div>
             </div>
 
-            <!-- Data & DB -->
-            <div class="skill-category reveal">
-                <div class="category-header">
-                    <div class="category-icon">🗄️</div>
-                    <h3>Data & Databases</h3>
+            <!-- Domain 4: Data & Databases -->
+            <div class="skill-domain-card reveal" data-category="data">
+                <div class="domain-card-glow"></div>
+                <div class="domain-card-header">
+                    <div class="domain-icon-wrap data-icon-wrap">
+                        <span class="domain-emoji">ðŸ—„ï¸</span>
+                    </div>
+                    <div class="domain-header-meta">
+                        <div class="domain-badge-row">
+                            <span class="domain-level-badge badge-teal">Analytical Depth</span>
+                            <span class="domain-category-tag">Data Layer</span>
+                        </div>
+                        <h3 class="domain-title">Data Engineering &amp; Databases</h3>
+                    </div>
                 </div>
-                <div class="skill-pills">
-                    <span class="pill">SQL</span>
-                    <span class="pill">MySQL</span>
-                    <span class="pill">MongoDB</span>
-                    <span class="pill">Firebase</span>
-                    <span class="pill">Data Analytics</span>
+                <p class="domain-summary">Handling relational schema design, semantic vector embeddings, real-time database syncing, and dataset analytics.</p>
+
+                <!-- Skill Progress Bars -->
+                <div class="domain-skills-bars">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">SQL (MySQL, SQLite, Schema Design)</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Data Analytics (Pandas, NumPy, Preprocessing)</span>
+                            <span class="skill-percent" data-target="88">88%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Firebase &amp; Realtime Cloud Database</span>
+                            <span class="skill-percent" data-target="86">86%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 86%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">MongoDB &amp; NoSQL Document Stores</span>
+                            <span class="skill-percent" data-target="82">82%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 82%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Pill Tags -->
+                <div class="domain-pills-row">
+                    <span class="dpill">SQL</span>
+                    <span class="dpill">MySQL</span>
+                    <span class="dpill">Pandas</span>
+                    <span class="dpill">Firebase</span>
+                    <span class="dpill">MongoDB</span>
+                    <span class="dpill">MS Excel</span>
                 </div>
             </div>
 
-            <!-- Tools -->
-            <div class="skill-category reveal">
-                <div class="category-header">
-                    <div class="category-icon">🛠️</div>
-                    <h3>Tools & Platforms</h3>
+            <!-- Domain 5: Tools & DevOps -->
+            <div class="skill-domain-card reveal" data-category="tools">
+                <div class="domain-card-glow"></div>
+                <div class="domain-card-header">
+                    <div class="domain-icon-wrap tools-icon-wrap">
+                        <span class="domain-emoji">ðŸ› ï¸</span>
+                    </div>
+                    <div class="domain-header-meta">
+                        <div class="domain-badge-row">
+                            <span class="domain-level-badge badge-amber">Workflow Mastery</span>
+                            <span class="domain-category-tag">Ecosystem</span>
+                        </div>
+                        <h3 class="domain-title">DevOps &amp; Developer Tooling</h3>
+                    </div>
                 </div>
-                <div class="skill-pills">
-                    <span class="pill">Git & GitHub</span>
-                    <span class="pill">VS Code</span>
-                    <span class="pill">Java</span>
-                    <span class="pill">MS Excel</span>
-                    <span class="pill">Postman</span>
+                <p class="domain-summary">Streamlining version control, API testing suites, reproducible development environments, and collaborative deployment.</p>
+
+                <!-- Skill Progress Bars -->
+                <div class="domain-skills-bars">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Git &amp; GitHub Collaborative Workflows</span>
+                            <span class="skill-percent" data-target="94">94%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 94%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Postman API Testing &amp; Documentation</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">VS Code, Linux/Bash &amp; Environment Setup</span>
+                            <span class="skill-percent" data-target="90">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-top">
+                            <span class="skill-name">Java &amp; Core Object-Oriented Fundamentals</span>
+                            <span class="skill-percent" data-target="82">82%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" style="--fill-width: 82%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Pill Tags -->
+                <div class="domain-pills-row">
+                    <span class="dpill">Git</span>
+                    <span class="dpill">GitHub</span>
+                    <span class="dpill">Postman</span>
+                    <span class="dpill">VS Code</span>
+                    <span class="dpill">Java</span>
+                    <span class="dpill">Linux/Bash</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Featured Tech Stack Interactive Grid -->
+        <div class="skills-tech-showcase reveal">
+            <div class="tech-showcase-header">
+                <span class="tech-badge">CORE TECHNOLOGIES</span>
+                <h4 class="tech-showcase-title">Interactive Tooling Ecosystem</h4>
+                <p class="tech-showcase-subtitle">Hover over each technology to inspect domain roles and implementation strengths</p>
+            </div>
+
+            <div class="tech-icon-grid" id="techIconGrid">
+                <div class="tech-icon-card reveal" data-tech="python" data-cat="ai backend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/python-svgrepo-com.svg" alt="Python" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸ</div>
+                        <span class="tech-card-name">Python</span>
+                        <span class="tech-card-role">AI &amp; Core Logic</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="django" data-cat="backend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/django-svgrepo-com.svg" alt="Django" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸŽ¸</div>
+                        <span class="tech-card-name">Django</span>
+                        <span class="tech-card-role">Backend Framework</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="api" data-cat="backend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/api-svgrepo-com.svg" alt="REST API" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸ”—</div>
+                        <span class="tech-card-name">REST APIs</span>
+                        <span class="tech-card-role">Service Architecture</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="html" data-cat="frontend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/html-5-svgrepo-com.svg" alt="HTML5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸ“„</div>
+                        <span class="tech-card-name">HTML5</span>
+                        <span class="tech-card-role">Semantic Web</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="css" data-cat="frontend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/css-3-svgrepo-com.svg" alt="CSS3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸŽ¨</div>
+                        <span class="tech-card-name">CSS3</span>
+                        <span class="tech-card-role">Responsive Styling</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="javascript" data-cat="frontend">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/javascript-svgrepo-com.svg" alt="JavaScript" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">âš¡</div>
+                        <span class="tech-card-name">JavaScript</span>
+                        <span class="tech-card-role">Dynamic Logic</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="sql" data-cat="data">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/sql-database-sql-azure-svgrepo-com.svg" alt="SQL" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">ðŸ—„ï¸</div>
+                        <span class="tech-card-name">SQL</span>
+                        <span class="tech-card-role">Relational DB</span>
+                    </div>
+                </div>
+                <div class="tech-icon-card reveal" data-tech="java" data-cat="tools">
+                    <div class="tech-card-inner">
+                        <img src="assets/images/techstack/java-svgrepo-com.svg" alt="Java" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="icon-fallback" style="display:none">â˜•</div>
+                        <span class="tech-card-name">Java</span>
+                        <span class="tech-card-role">OOP Foundations</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Icon Grid -->
-        <div class="tech-icon-grid">
-            <div class="tech-icon-card reveal" title="Python">
-                <img src="images/Techstack img/python-svgrepo-com.svg" alt="Python" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">🐍</div>
-                <span>Python</span>
-            </div>
-            <div class="tech-icon-card reveal" title="Django">
-                <img src="images/Techstack img/django-svgrepo-com.svg" alt="Django" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">🎸</div>
-                <span>Django</span>
-            </div>
-            <div class="tech-icon-card reveal" title="REST API">
-                <img src="images/Techstack img/api-svgrepo-com.svg" alt="REST API" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">🔗</div>
-                <span>REST API</span>
-            </div>
-            <div class="tech-icon-card reveal" title="HTML">
-                <img src="images/Techstack img/html-5-svgrepo-com.svg" alt="HTML" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">📄</div>
-                <span>HTML5</span>
-            </div>
-            <div class="tech-icon-card reveal" title="CSS">
-                <img src="images/Techstack img/css-3-svgrepo-com.svg" alt="CSS" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">🎨</div>
-                <span>CSS3</span>
-            </div>
-            <div class="tech-icon-card reveal" title="JavaScript">
-                <img src="images/Techstack img/javascript-svgrepo-com.svg" alt="JavaScript" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">⚡</div>
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-icon-card reveal" title="Java">
-                <img src="images/Techstack img/java-svgrepo-com.svg" alt="Java" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">☕</div>
-                <span>Java</span>
-            </div>
-            <div class="tech-icon-card reveal" title="SQL">
-                <img src="images/Techstack img/sql-database-sql-azure-svgrepo-com.svg" alt="SQL" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="icon-fallback" style="display:none">🗄️</div>
-                <span>SQL</span>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -309,22 +766,19 @@
 
         <div class="projects-grid">
 
-            <!-- Project 1 – IntelliFarm -->
-            <div class="project-card reveal" id="project-intellifarm">
+            <!-- Project 1 â€“ Inivalam -->
+            <div class="project-card reveal" id="project-inivalam">
                 <div class="project-card-inner">
                     <div class="project-number">01</div>
                     <div class="project-top">
-                        <div class="project-icon">🌾</div>
+                        <div class="project-icon">ðŸŒ¾</div>
                         <div class="project-links-top">
-                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                            <a href="https://github.com/Praveenraju10/Inivalam-Smart-Agri-Platform.git" class="icon-link" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-                            </a>
-                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
                     </div>
-                    <h3 class="project-title">IntelliFarm – Smart Agriculture Platform</h3>
+                    <h3 class="project-title">Inivalam â€“ Smart Agriculture Platform</h3>
                     <p class="project-desc">AI-powered system providing crop advisory, disease detection, and smart irrigation management for farmers. Real-time monitoring with ML-based predictions.</p>
                     <div class="project-tags">
                         <span>Python</span>
@@ -336,23 +790,20 @@
                 </div>
             </div>
 
-            <!-- Project 2 – Pothole Detection -->
+            <!-- Project 2 â€“ Pothole Detection -->
             <div class="project-card reveal featured" id="project-pothole">
                 <div class="project-card-inner">
                     <div class="project-number">02</div>
                     <div class="project-featured-badge">Featured</div>
                     <div class="project-top">
-                        <div class="project-icon">🛣️</div>
+                        <div class="project-icon">ðŸ›£ï¸</div>
                         <div class="project-links-top">
-                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                            <a href="https://github.com/Praveenraju10/Pothole-detection.git" class="icon-link" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-                            </a>
-                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
                     </div>
-                    <h3 class="project-title">Pothole Detection – Computer Vision</h3>
+                    <h3 class="project-title">Pothole Detection â€“ Computer Vision</h3>
                     <p class="project-desc">Deep learning model using YOLOv5 to detect potholes from road images in real-time, improving road safety through automated infrastructure monitoring.</p>
                     <div class="project-tags">
                         <span>Python</span>
@@ -363,29 +814,53 @@
                 </div>
             </div>
 
-            <!-- Project 3 – Time Bank -->
+            <!-- Project 3 â€“ Time Bank -->
             <div class="project-card reveal" id="project-timebank">
                 <div class="project-card-inner">
                     <div class="project-number">03</div>
                     <div class="project-top">
-                        <div class="project-icon">⏰</div>
+                        <div class="project-icon">â°</div>
                         <div class="project-links-top">
-                            <a href="#" class="icon-link" title="GitHub" aria-label="GitHub">
+                            <a href="https://github.com/Praveenraju10/Time-Bank-Community.git" class="icon-link" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
-                            </a>
-                            <a href="#" class="icon-link" title="Live Demo" aria-label="Live Demo">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
                     </div>
                     <h3 class="project-title">Time Bank Community Platform</h3>
-                    <p class="project-desc">Web platform enabling community members to exchange services using time credits instead of money — fostering community-driven collaboration and fair skill exchange.</p>
+                    <p class="project-desc">Web platform enabling community members to exchange services using time credits instead of money â€” fostering community-driven collaboration and fair skill exchange.</p>
                     <div class="project-tags">
                         <span>Django</span>
                         <span>JavaScript</span>
                         <span>SQL</span>
                         <span>REST API</span>
                         <span>HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 â€“ LawShathi -->
+            <div class="project-card reveal" id="project-lawshathi">
+                <div class="project-card-inner">
+                    <div class="project-number">04</div>
+                    <div class="project-top">
+                        <div class="project-icon">âš–ï¸</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Praveenraju10/LawShathi.git" class="icon-link" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.57v-2c-3.33.72-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">LawShathi â€“ Smart Legal Assistant & RAG System</h3>
+                    <p class="project-desc">Multi-stage Agentic AI & RAG legal consultation system for Indian law. Features intelligent intent routing, automated legal complaint drafting with bilingual PDF generation, similarity-based case precedent search with verdict analytics, speech-to-text/text-to-speech (English/Tamil), and comprehensive legal knowledge base (Consumer Protection, IT Act, BNS/BNSS, RTI, Labour Codes, Property Acts).</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>RAG</span>
+                        <span>FAISS</span>
+                        <span>TF-IDF</span>
+                        <span>Llama-3.3-70b</span>
+                        <span>React</span>
+                        <span>ReportLab</span>
                     </div>
                 </div>
             </div>
@@ -449,7 +924,7 @@
 
             <div class="achievement-card reveal" id="achv-kalam">
                 <div class="achievement-glow"></div>
-                <div class="achievement-icon-wrap">🏆</div>
+                <div class="achievement-icon-wrap">ðŸ†</div>
                 <div class="achievement-body">
                     <span class="achievement-year">2025</span>
                     <h3>Dr. Kalam Young Achiever Award</h3>
@@ -459,20 +934,20 @@
 
             <div class="achievement-card reveal gold" id="achv-first">
                 <div class="achievement-glow"></div>
-                <div class="achievement-icon-wrap">🥇</div>
+                <div class="achievement-icon-wrap">ðŸ¥‡</div>
                 <div class="achievement-body">
                     <span class="achievement-year">2025</span>
-                    <h3>First Place – Project Presentation</h3>
+                    <h3>First Place â€“ Project Presentation</h3>
                     <p>Won first place for presenting an impactful project solution with strong technical implementation and innovation.</p>
                 </div>
             </div>
 
             <div class="achievement-card reveal silver" id="achv-second">
                 <div class="achievement-glow"></div>
-                <div class="achievement-icon-wrap">🥈</div>
+                <div class="achievement-icon-wrap">ðŸ¥ˆ</div>
                 <div class="achievement-body">
                     <span class="achievement-year">2025</span>
-                    <h3>Second Place – Freshathon 2K'25</h3>
+                    <h3>Second Place â€“ Freshathon 2K'25</h3>
                     <p>Awarded second place for innovative problem-solving and project execution during Freshathon 2K'25 competition.</p>
                 </div>
             </div>
@@ -481,80 +956,361 @@
     </div>
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
+<!-- ===== CERTIFICATIONS SECTION ===== -->
 <section id="certifications" class="section certs-section">
     <div class="container">
         <div class="section-header">
-            <div class="section-label">LEARNING PATH</div>
-            <h2 class="section-title">Licenses & <span class="text-accent">Certifications</span></h2>
-            <p class="section-desc">Continuous learning and skill validation across platforms</p>
+            <div class="section-label">CREDENTIALS &amp; SPECIALIZATIONS</div>
+            <h2 class="section-title">Licenses &amp; <span class="text-accent">Certifications</span></h2>
+            <p class="section-desc">Industry-recognized certifications and intensive hands-on specializations validated by accredited government bodies, IIT-incubated institutions, and global platforms.</p>
         </div>
 
-        <div class="certs-grid">
+        <!-- Trust & Verification Highlights Banner -->
+        <div class="certs-trust-banner reveal">
+            <div class="trust-badge-item">
+                <div class="trust-icon-box">ðŸ›ï¸</div>
+                <div class="trust-text">
+                    <span class="trust-label">Govt. Accredited</span>
+                    <span class="trust-desc">NIELIT Calicut (MeitY, Govt. of India)</span>
+                </div>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-badge-item">
+                <div class="trust-icon-box">ðŸŽ“</div>
+                <div class="trust-text">
+                    <span class="trust-label">Academic Excellence</span>
+                    <span class="trust-desc">GUVI &amp; IIT Madras Research Park</span>
+                </div>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-badge-item">
+                <div class="trust-icon-box">ðŸ›¡ï¸</div>
+                <div class="trust-text">
+                    <span class="trust-label">100% Verifiable</span>
+                    <span class="trust-desc">All Credentials Digitally Authenticated</span>
+                </div>
+            </div>
+        </div>
 
-            <a href="https://drive.google.com/file/d/1tSRByI9RE5vUpKu7dcBZfeZNgk_ruMns/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-django">
-                <div class="cert-icon">🎸</div>
-                <div class="cert-content">
-                    <span class="cert-platform-tag">Udemy</span>
-                    <h3>Django Development</h3>
-                    <p>Complete Django framework for building scalable web applications</p>
-                </div>
-                <div class="cert-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-            </a>
+        <!-- Certificate Filter Bar -->
+        <div class="certs-filter-bar" id="certsFilterBar">
+            <button class="cert-filter-btn active" data-cert-filter="all">
+                <span class="filter-dot"></span>All Credentials (6)
+            </button>
+            <button class="cert-filter-btn" data-cert-filter="cloud">
+                <span class="filter-dot"></span>Cloud &amp; Infrastructure
+            </button>
+            <button class="cert-filter-btn" data-cert-filter="ai">
+                <span class="filter-dot"></span>AI &amp; Data Science
+            </button>
+            <button class="cert-filter-btn" data-cert-filter="web">
+                <span class="filter-dot"></span>Full-Stack &amp; Web
+            </button>
+            <button class="cert-filter-btn" data-cert-filter="govt">
+                <span class="filter-dot"></span>Govt &amp; Academic
+            </button>
+        </div>
 
-            <a href="https://drive.google.com/file/d/1ODFtBgr_FBFYCi4sQ2E3RCQzX6arAbBc/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-python">
-                <div class="cert-icon">🐍</div>
-                <div class="cert-content">
-                    <span class="cert-platform-tag">GUVI</span>
-                    <h3>Python Programming</h3>
-                    <p>Core Python programming concepts, data structures, and algorithms</p>
-                </div>
-                <div class="cert-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-            </a>
+        <!-- Deluxe Certifications Grid -->
+        <div class="certs-deluxe-grid" id="certsGrid">
 
-            <a href="https://drive.google.com/file/d/1PtvNPKu84VlllNeimu9wUHFwgVQFDRnM/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-excel">
-                <div class="cert-icon">📊</div>
-                <div class="cert-content">
-                    <span class="cert-platform-tag">Udemy</span>
-                    <h3>MS Excel – Data Analysis</h3>
-                    <p>Advanced Excel for data analysis, pivots, and business reporting</p>
+            <!-- Certificate: AWS Certified Cloud Practitioner -->
+            <div class="cert-deluxe-card reveal" data-cert-category="cloud web" id="cert-aws">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/aws-certified-cloud-practitioner.png', 'AWS Certified Cloud Practitioner', 'Amazon Web Services (AWS)', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating aws-badge">
+                        <span>☁️ AWS Certified</span>
+                    </span>
                 </div>
-                <div class="cert-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">Amazon Web Services</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">✓</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">AWS Certified Cloud Practitioner</h3>
+                    <p class="cert-card-desc">Industry-standard accreditation validating foundational understanding of AWS Cloud infrastructure, security models, compliance, high-availability architecture, and cloud economics.</p>
+                    <div class="cert-skills-tags">
+                        <span>AWS Cloud</span>
+                        <span>Cloud Architecture</span>
+                        <span>Security &amp; Compliance</span>
+                        <span>Cloud Economics</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/aws-certified-cloud-practitioner.png', 'AWS Certified Cloud Practitioner', 'Amazon Web Services (AWS)', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://drive.google.com/file/d/1RGPCW02BIdy6sENyXnRGUn8vAQJOv7P5/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-html">
-                <div class="cert-icon">🌐</div>
-                <div class="cert-content">
-                    <span class="cert-platform-tag">Udemy</span>
-                    <h3>HTML & CSS Mastery</h3>
-                    <p>Modern front-end design with HTML5, CSS3, and responsive layouts</p>
+            <!-- Certificate 1: NIELIT Calicut -->
+            <div class="cert-deluxe-card reveal" data-cert-category="ai govt" id="cert-nielit">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/NIELT certificate_page-0001.jpg', 'AI &amp; Data Analytics Internship', 'NIELIT Calicut â€“ Ministry of Electronics &amp; IT, Govt. of India', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/NIELT certificate_page-0001.jpg" alt="NIELIT AI &amp; Data Analytics Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating govt-badge">
+                        <span>ðŸ›ï¸ Govt. of India</span>
+                    </span>
                 </div>
-                <div class="cert-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">NIELIT Calicut</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">âœ“</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">AI &amp; Data Analytics Internship</h3>
+                    <p class="cert-card-desc">Advanced 4-week offline specialization in Artificial Intelligence, Machine Learning models, dataset engineering, and Django-based web integration at NIELIT Calicut.</p>
+                    <div class="cert-skills-tags">
+                        <span>AI &amp; Machine Learning</span>
+                        <span>OpenCV</span>
+                        <span>Data Analytics</span>
+                        <span>Django</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/NIELT certificate_page-0001.jpg', 'AI &amp; Data Analytics Internship', 'NIELIT Calicut â€“ Ministry of Electronics &amp; IT, Govt. of India', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://drive.google.com/file/d/1Y-XITxkiv7qVynPAcFafrsDjvnWC5D9k/view?usp=drive_link" target="_blank" class="cert-card reveal" id="cert-nielit">
-                <div class="cert-icon">🔬</div>
-                <div class="cert-content">
-                    <span class="cert-platform-tag">NIELIT</span>
-                    <h3>AI & Data Analytics Internship</h3>
-                    <p>Official internship certificate from NIELIT Calicut – AI and Data Analytics</p>
+            <!-- Certificate 2: Python Programming GUVI -->
+            <div class="cert-deluxe-card reveal" data-cert-category="ai govt" id="cert-python">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/python.png', 'Python Programming Certification', 'GUVI Geek Networks â€“ Incubated by IIT Madras Research Park', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/python.png" alt="GUVI Python Programming Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating iit-badge">
+                        <span>ðŸŽ“ IIT-M Incubated</span>
+                    </span>
                 </div>
-                <div class="cert-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">GUVI / IIT-M Research Park</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">âœ“</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">Python Programming &amp; Algorithmic Foundations</h3>
+                    <p class="cert-card-desc">Rigorous certification validating core Python architecture, data structures, modular software design, object-oriented concepts, and computational problem solving.</p>
+                    <div class="cert-skills-tags">
+                        <span>Python</span>
+                        <span>Data Structures</span>
+                        <span>OOP</span>
+                        <span>Algorithms</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/python.png', 'Python Programming Certification', 'GUVI Geek Networks â€“ Incubated by IIT Madras Research Park', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </div>
+
+            <!-- Certificate 3: Django Development Udemy -->
+            <div class="cert-deluxe-card reveal" data-cert-category="web" id="cert-django">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/Django.png', 'Django Web Development Certification', 'Udemy Global Education â€“ Backend Engineering', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/Django.png" alt="Django Web Development Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating udemy-badge">
+                        <span>ðŸŒ Udemy Verified</span>
+                    </span>
+                </div>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">Udemy</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">âœ“</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">Django Web Development &amp; REST APIs</h3>
+                    <p class="cert-card-desc">End-to-end web framework mastery including Django ORM modeling, RESTful API endpoints, robust user authentication, views, templates, and database migrations.</p>
+                    <div class="cert-skills-tags">
+                        <span>Django</span>
+                        <span>REST API</span>
+                        <span>ORM</span>
+                        <span>Backend Auth</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/Django.png', 'Django Web Development Certification', 'Udemy Global Education â€“ Backend Engineering', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 4: MS Excel GUVI -->
+            <div class="cert-deluxe-card reveal" data-cert-category="ai govt" id="cert-excel">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/MS EXCEL.png', 'MS Excel for Data Analysis', 'GUVI / Google for Education Partner', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/MS EXCEL.png" alt="MS Excel Data Analysis Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating iit-badge">
+                        <span>ðŸŽ“ GUVI Verified</span>
+                    </span>
+                </div>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">GUVI / GOOGLE PARTNER</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">âœ“</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">MS Excel for Advanced Data Analysis</h3>
+                    <p class="cert-card-desc">Advanced data processing, multi-variable lookup formulas, dynamic PivotTables, data aggregation models, and executive chart presentations for analytics workflows.</p>
+                    <div class="cert-skills-tags">
+                        <span>Data Analytics</span>
+                        <span>Pivot Tables</span>
+                        <span>Formulas &amp; Modeling</span>
+                        <span>Visualization</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/MS EXCEL.png', 'MS Excel for Data Analysis', 'GUVI / Google for Education Partner', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 5: HTML & CSS GUVI -->
+            <div class="cert-deluxe-card reveal" data-cert-category="web govt" id="cert-html">
+                <div class="cert-card-shine"></div>
+                <div class="cert-thumb-container" onclick="openCertModal('assets/images/certificates/HTML CSS.png', 'HTML5 &amp; CSS3 Modern Design Mastery', 'GUVI / Google for Education Partner', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                    <img src="assets/images/certificates/HTML CSS.png" alt="HTML and CSS Mastery Certificate" class="cert-thumb-img" loading="lazy">
+                    <div class="cert-thumb-overlay">
+                        <span class="cert-zoom-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            Preview Certificate
+                        </span>
+                    </div>
+                    <span class="cert-badge-floating iit-badge">
+                        <span>ðŸŽ“ GUVI Verified</span>
+                    </span>
+                </div>
+                <div class="cert-card-body">
+                    <div class="cert-meta-row">
+                        <span class="cert-issuer-name">GUVI / GOOGLE PARTNER</span>
+                        <span class="cert-status-pill">
+                            <span class="verified-check">âœ“</span> Verified
+                        </span>
+                    </div>
+                    <h3 class="cert-card-title">HTML5 &amp; CSS3 Modern Design Mastery</h3>
+                    <p class="cert-card-desc">Comprehensive frontend design engineering including Flexbox, CSS Grid layouts, media queries, cross-browser compatibility, and modern UI transitions.</p>
+                    <div class="cert-skills-tags">
+                        <span>HTML5</span>
+                        <span>CSS3 Grid &amp; Flexbox</span>
+                        <span>Responsive UI</span>
+                        <span>Web Standards</span>
+                    </div>
+                    <div class="cert-actions-row">
+                        <button class="cert-btn-preview" onclick="openCertModal('assets/images/certificates/HTML CSS.png', 'HTML5 &amp; CSS3 Modern Design Mastery', 'GUVI / Google for Education Partner', 'https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ')">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            Quick View
+                        </button>
+                        <a href="https://drive.google.com/drive/u/0/folders/13jzQzDjB5t0ZhrevsMUzrd9d8dD6c0kZ" target="_blank" rel="noopener noreferrer" class="cert-btn-verify" title="Verify on Google Drive">
+                            <span>Verify</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
 </section>
+
+<!-- ===== CERTIFICATE LIGHTBOX MODAL ===== -->
+<div class="cert-modal-backdrop" id="certModalBackdrop" onclick="closeCertModal(event)" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-modal-dialog" id="certModalDialog" onclick="event.stopPropagation()">
+        <!-- Header -->
+        <div class="cert-modal-header">
+            <div class="cert-modal-header-meta">
+                <span class="cert-modal-badge" id="modalCertBadge">âœ“ VERIFIED CREDENTIAL</span>
+                <h3 class="cert-modal-title" id="modalCertTitle">Certificate Preview</h3>
+                <p class="cert-modal-issuer" id="modalCertIssuer">Issuer Authority</p>
+            </div>
+            <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close Certificate Preview">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <!-- Image Viewer Container -->
+        <div class="cert-modal-body">
+            <div class="cert-modal-image-wrap">
+                <img src="" alt="Certificate High-Res Preview" id="modalCertImg" class="cert-modal-img" />
+            </div>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="cert-modal-footer">
+            <span class="cert-modal-hint">Press <kbd>ESC</kbd> or click outside to exit</span>
+            <div class="cert-modal-footer-btns">
+                <button class="btn btn-outline cert-modal-btn-close" onclick="closeCertModal()">Close</button>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-modal-btn-drive" id="modalCertDriveLink">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Open Original in Google Drive
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="section contact-section">
@@ -603,11 +1359,20 @@
                     <div class="contact-info-items">
                         <div class="contact-info-item">
                             <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <a href="tel:+919361314071" class="info-value" style="color: inherit; text-decoration: none;">+91 9361314071</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div>
                                 <span class="info-label">Email</span>
-                                <span class="info-value">praveenraju@email.com</span>
+                                <a href="mailto:praveenraju192006@gmail.com" class="info-value" style="color: inherit; text-decoration: none;">praveenraju192006@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-info-item">
@@ -634,15 +1399,15 @@
                         <h4>Find Me On</h4>
                         <div class="social-row">
                             <a href="https://github.com/Praveenraju10" target="_blank" class="social-btn" id="social-github" aria-label="GitHub">
-                                <img src="images/github.svg" alt="GitHub">
+<img src="assets/images/icons/github.svg" alt="GitHub">
                                 <span>GitHub</span>
                             </a>
                             <a href="https://www.linkedin.com/in/praveen-raju-k/" target="_blank" class="social-btn" id="social-linkedin" aria-label="LinkedIn">
-                                <img src="images/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
+<img src="assets/images/icons/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
                                 <span>LinkedIn</span>
                             </a>
                             <a href="https://instagram.com/" target="_blank" class="social-btn" id="social-instagram" aria-label="Instagram">
-                                <img src="images/instagram.svg" alt="Instagram">
+                                <img src="assets/images/icons/instagram.svg" alt="Instagram">
                                 <span>Instagram</span>
                             </a>
                         </div>
@@ -657,15 +1422,15 @@
 <footer class="footer">
     <div class="footer-inner">
         <a href="#home" class="footer-logo">
-            <span class="logo-bracket">&lt;</span>PRK<span class="logo-bracket">/&gt;</span>
+            <span class="logo-bracket">&lt;</span>Raju<span class="logo-bracket">/&gt;</span>
         </a>
-        <p class="footer-copy">© 2025 Praveen Raju K. Crafted with passion & code.</p>
+        <p class="footer-copy">Â© 2025 Praveen Raju K. Crafted with passion & code.</p>
         <div class="footer-socials">
             <a href="https://github.com/Praveenraju10" target="_blank" aria-label="GitHub">
-                <img src="images/github.svg" alt="GitHub">
+                <img src="assets/images/icons/github.svg" alt="GitHub">
             </a>
             <a href="https://www.linkedin.com/in/praveen-raju-k/" target="_blank" aria-label="LinkedIn">
-                <img src="images/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
+                <img src="assets/images/icons/linkedin-square-logo-svgrepo-com.svg" alt="LinkedIn">
             </a>
         </div>
     </div>
@@ -675,6 +1440,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
 </a>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

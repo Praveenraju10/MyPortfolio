@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+portfolio-react/node_modules/
+
+# Production builds
+dist/
+portfolio-react/dist/
+dist-ssr/
+
+# Local env & IDE
+.kilo/
+.gemini/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.local
+*.log
+
+# Temp files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
